@@ -1,0 +1,130 @@
+html, body {
+	height:  100%;
+	--sc: #e65146;
+	--sc-dark: #de392d;
+	--pm: #1e90ff;
+	--pm-dark: #0071de;
+	font-family: 'Montserrat', sans-serif;
+	min-width: 320px;
+}
+
+body.overflow-stop {
+	overflow: hidden;	
+}
+
+.hero {
+	height:  100%;
+	/* background-image:  linear-gradient(rgba(0,0,0,0.3), rgba(256,256,256,0.0)), url("../img/hero/white2.jpg"); */
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center center;
+}
+
+.parallax-slider {
+	filter: brightness(0.7);
+}
+
+.navbar {
+	box-shadow: none;
+	font-weight: 400;
+	padding-top: 15px;
+	color: #fff;
+	text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.navbar-toggler {
+	color: #fff;
+}
+
+.navbar .nav-item {
+	margin-right: 15px;
+}
+
+.navbar .navbar-brand {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+	padding: 1rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	border-radius: 50rem;
+}
+
+.navbar .nav-link::after {
+	display: none;
+}
+
+.navbar a {
+	color: #fff;
+}
+
+.navbar .account button {
+	font-weight:  600;
+}
+
+.navbar .primary {
+	background-color: var(--pm);	
+}
+
+.navbar .primary:hover,  
+.navbar .primary:focus {
+	color: inherit;
+	background-color: var(--pm-dark);
+}
+
+.navbar .secondary {
+	background-color: var(--sc);
+}
+
+.navbar .secondary:hover,  
+.navbar .secondary:focus {
+	color: inherit;
+	background-color: var(--sc-dark);
+}
+
+
+@media (max-width: 991.98px) {    
+
+	.navbar-collapse.collapse:not(.show) {
+		display: block;
+	}
+
+    .navbar-collapse .navbar-nav {
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -320px;        
+        transition: left 0.35s ease;
+        background-color: var(--sc);
+        min-width: 320px;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
+
+    .navbar-collapse.show2 .navbar-nav {        
+        left: 0;
+    }
+    
+}
+
+@media (max-width: 575.98px) {
+	.navbar {
+		padding: 0;
+	}
+	.navbar-toggler {
+		padding-right: 0;
+		z-index: 1;
+	}
+	.navbar-brand {
+		margin-right: 0;
+	}
+}
+
+.hero .md-form.input-with-pre-icon .input-prefix {
+    left: 7px;
+    bottom: -5px;    
+}

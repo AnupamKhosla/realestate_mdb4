@@ -1,91 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Material Design for Bootstrap</title>
-    <!-- MDB icon -->
-    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-    <!-- Google Fonts Roboto -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Material Design Bootstrap -->
-    <link rel="stylesheet" href="css/mdb.min.css">
-    <!-- Your custom styles (optional) -->
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <!-- Start your project here-->
-    <div class="container">
-      <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
-        <div class="text-center">
-          <h2>Release surprise! </h2>
-          <p class="h4 fw-bold">50% OFF MDB PRO</p>
-          <div class="row justify-content-center">
-            <div class="col-md-6">
-              <img src="https://mdbootstrap.com/img/Marketing/campaigns/50off-SJARV.png" class="img-fluid" alt="" />
-            </div>
-          </div>
-  
-          <h5 class="mb-3">Use this coupon code before it expires and claim the reward</h5>
-          <p class="mb-3">The coupon code will be valid until the end of the week</p>
-  
-          <div class="mt-2">
-  
-            <!--Coupon code-->
-            <code class="h2 border rounded py-1 px-5 flex-item me-2">T9TTVSQB</code>
-            <br>
-  
-            <!--Copy to clipboard-->
-  
-            <a id="disc-50" href="#" type="button" class="btn-lg btn-info" style="background-color: #009FE7;">COPY TO
-              CLIPBOARD <i class="far fa-copy ml-2"></i></a>
-            <a class="btn btn-outline-primary btn-lg mt-3" href="https://mdbootstrap.com/docs/standard/getting-started/"
-              target="_blank" style="border-color: #009FE7; color: #009FE7;" role="button">Start MDB tutorial</a>
-  
-  
-          </div>
-          <p>See <a href="https://mdbootstrap.com/pro/">prices</a></p>
-          <div class=" my-2 alert alert-success" id="code-success" style="display: none;">
-            Copied
-          </div>
-  
-        </div>
-      </div>
-    </div>
-    <!-- End your project here-->
-    <!-- jQuery -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="js/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="js/mdb.min.js"></script>
-    <!-- Your custom scripts (optional) -->
-    <script type="text/javascript">
-      var a = document.getElementById('disc-50');
-      a.onclick = function () {
-        Clipboard_CopyTo("T9TTVSQB");
-        var div = document.getElementById('code-success');
-        div.style.display = 'block';
-        setTimeout(function () {
-          document.getElementById('code-success').style.display = 'none';
-        }, 900);
-      };
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Material Design for Bootstrap</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+  <!-- Font Awesome -->
 
-      function Clipboard_CopyTo(value) {
-        var tempInput = document.createElement("input");
-        tempInput.value = value;
-        document.body.appendChild(tempInput);
-        tempInput.select();
-        document.execCommand("copy");
-        document.body.removeChild(tempInput);
-      }
-    </script>
-  </body>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+
+
+
+  <div class="container-fluid hero parallax-window d-flex flex-column justify-content-between" data-parallax="scroll" data-image-src="img/hero/white2.jpg">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <!-- Container wrapper -->
+      <div class="container">
+        <!-- Navbar brand -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <span class="material-icons-outlined mr-2 display-4">maps_home_work</span>
+          NK BUILDERS
+        </a>
+
+        <!-- Toggle button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarButtonsExample" aria-controls="navbarButtonsExample" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="material-icons-outlined h1">
+            menu
+          </span>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarButtonsExample">
+          <!-- Left links -->
+          <ul class="navbar-nav ">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" aria-expanded="false" data-toggle="dropdown">
+                Rent
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li>
+                  <a class="dropdown-item" href="#">Action</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Another action</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" aria-expanded="false" data-toggle="dropdown">
+                Buy
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li>
+                  <a class="dropdown-item" href="#">Action</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Another action</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" aria-expanded="false" data-toggle="dropdown">
+                Sell
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li>
+                  <a class="dropdown-item" href="#">Action</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Another action</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" aria-expanded="false" data-toggle="dropdown">
+                Explore
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li>
+                  <a class="dropdown-item" href="#">Action</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Another action</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item d-flex align-items-center">
+              <span class="material-icons-outlined mr-1 ">call</span>
+              <span class="number d-none d-xl-block">(+91) 84 695 34 587</span>
+            </li>
+            <li>
+              <div class="d-flex align-items-center account">
+                <button type="button" class="btn btn-md secondary rounded-pill">
+                  Post ad
+                </button>
+                <button type="button" class="btn btn-md primary rounded-pill ">
+                  Login
+                </button>
+              </div>
+            </li>
+
+          </ul>
+          <!-- Left links -->
+
+          
+        </div>
+        <!-- Collapsible wrapper -->
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+
+    <!-- News jumbotron -->
+    <div class="jumbotron text-center hoverable p-4 w-75 mx-auto">
+
+      <ul class="nav nav-tabs nav-justified md-tabs indigo w-50 mx-auto" id="myTabJust" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="home-tab-just" data-toggle="tab" href="#home-just" role="tab" aria-controls="home-just"
+          aria-selected="true">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="profile-tab-just" data-toggle="tab" href="#profile-just" role="tab" aria-controls="profile-just"
+          aria-selected="false">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="contact-tab-just" data-toggle="tab" href="#contact-just" role="tab" aria-controls="contact-just"
+          aria-selected="false">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Material inline form -->
+      <form class="form-inline mx-auto">
+        <!-- Material input -->
+        <div class="md-form input-with-pre-icon">
+          <span class="material-icons-outlined input-prefix">
+            place
+          </span>
+          <input type="text" id="prefixInside" class="form-control">
+          <label for="prefixInside">Location </label>
+        </div>
+        
+        <div class="md-form input-group">
+         <select class="mdb-select colorful-select dropdown-primary md-form" multiple searchable="Search here..">
+          <option value="" disabled selected>Choose your country</option>
+          <option value="1">USA</option>
+          <option value="2">Germany</option>
+          <option value="3">France</option>
+          <option value="4">Poland</option>
+          <option value="5">Japan</option>
+        </select>
+        <label class="mdb-main-label">Label example</label>
+        <button class="btn-save btn btn-primary btn-sm">Save</button>
+      </div>
+      <!-- Checkbox -->
+      <div class="form-check mb-2 mr-sm-2">
+        <input class="form-check-input" type="checkbox" id="inlineFormCheckMD">
+        <label class="form-check-label" for="inlineFormCheckMD">
+          Remember me
+        </label>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <!-- Material inline form -->
+
+  </div>
+  <!-- News jumbotron -->
+  
+  <div class="w-100"></div>
+  
+</div>
+
+
+
+
+
+
+<a class="btn btn-lg" href="https://demoapus2.com/houzing/">DEMO</a>
+<!-- jQuery -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<!-- Your custom scripts (optional) -->
+<script type="text/javascript" src="js/parallax.js"></script>
+
+<script src="js/script.js"></script>
+
+</body>
 </html>
